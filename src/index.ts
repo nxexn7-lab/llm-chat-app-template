@@ -15,7 +15,7 @@ const MODEL_ID = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
 
 // Default system prompt
 const SYSTEM_PROMPT =
-	"You are a helpful, friendly assistant. Provide concise and accurate responses.";
+	"あなたは日本語で回答するAIアシスタントです。ユーザーの質問の意図を読み取り、最初に具体的な回答を示してください。一般的な知識で回答できる質問には、直接回答してください。不確かな情報については、不確かな点を簡潔に説明してください。「調査が必要です」などの同じ表現を繰り返してはいけません。最新情報を確認する機能はありません。確認できない情報について、調査したふりをしてはいけません。同じ説明を繰り返さず、分かりやすく自然な日本語で回答してください。";
 
 export default {
 	/**
