@@ -27,12 +27,18 @@ userInput.addEventListener("input", function () {
 });
 
 // Send message on Enter (without Shift)
+
 userInput.addEventListener("keydown", function (e) {
-	if (e.key === "Enter" && !e.shiftKey) {
-		e.preventDefault();
-		sendMessage();
-	}
+  if (e.isComposing || e.keyCode === 229) {
+    return;
+  }
+
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
+    sendMessage();
+  }
 });
+
 
 // Send button click handler
 sendButton.addEventListener("click", sendMessage);
